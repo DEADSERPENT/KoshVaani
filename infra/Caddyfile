@@ -1,0 +1,48 @@
+# TLS termination in front of KoshVaani (Caddy obtains and renews certificates automatically).
+#   api.example-bank.test  -> the FastAPI backend on 127.0.0.1:8000
+#   app.example-bank.test  -> the built customer bundle (frontend/dist); operators get a separate host and bundle
+#
+# Run the backend with: uvicorn app.main:app --host 127.0.0.1 --port 8000 --proxy-headers --forwarded-allow-ips 127.0.0.1
+# so the per-address login-code limit sees the real client address, never the proxy's.
+# Set APP_ENV=production and FRONTEND_ORIGIN=https://app.example-bank.test in .env.
+
+api.example-bank.test {
+	encode gzip
+	# Never log request headers (bearer tokens) or bodies (transcripts).
+	log {
+		output file /var/log/caddy/api.log
+		format filter {
+			wrap json
+			request delete headers
+		}
+	}
+	header {
+		Strict-Transport-Security "max-age=63072000; includeSubDomains"
+		-Server
+	}
+	request_body {
+		max_size 11MB
+	}
+	# Covers REST and the voice WebSocket (the upgrade is handled automatically).
+	reverse_proxy 127.0.0.1:8000
+}
+
+app.example-bank.test {
+	root * /srv/koshvaani/dist
+	encode gzip
+	try_files {path} /index.html
+	file_server
+	header {
+		Strict-Transport-Security "max-age=63072000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Content-Security-Policy "frame-ancestors 'none'"
+		Referrer-Policy "no-referrer"
+		Permissions-Policy "camera=(), geolocation=(), microphone=(self)"
+		-Server
+	}
+	# A logged-out page must never be replayed from cache; hashed assets can be cached forever.
+	@shell path /index.html /
+	header @shell Cache-Control "no-store"
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+}

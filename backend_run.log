@@ -1,0 +1,128 @@
+INFO:     Started server process [36024]
+INFO:     Waiting for application startup.
+{"timestamp": "2026-11-20T18:46:35.776040+00:00", "level": "WARNING", "component": "app", "event": "Bootstrap admin created; remove BOOTSTRAP_OPERATOR_* from the environment."}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:65285 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-8F05F0DFC897/verify HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:36.758887+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-7a38eee8db92", "session_id": "VS-BA98FFF10454", "tool": "get_account_balance", "duration_ms": 0, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:36.777965+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-6264013fe15d", "session_id": "VS-BA98FFF10454", "tool": "get_mini_statement", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:36.785947+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-d982fb32d26e", "session_id": "VS-BA98FFF10454", "tool": "get_loan_summary", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/accounts HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:36.796981+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-2e36e8c5c7b2", "session_id": "VS-BA98FFF10454", "tool": "search_customer_transactions", "duration_ms": 1, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:36.797978+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-2e36e8c5c7b2", "session_id": "VS-BA98FFF10454", "tool": "prepare_dispute", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:36.805978+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-3f97a748cc4a", "session_id": "VS-BA98FFF10454", "tool": "confirm_dispute", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:38.303115+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-9c2fe423b079"}
+{"timestamp": "2026-11-20T18:46:38.304775+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-9c2fe423b079", "session_id": "VS-BA98FFF10454", "tool": "get_transaction_status", "duration_ms": 0, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:39.904292+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-9c2fe423b079"}
+{"timestamp": "2026-11-20T18:46:39.906435+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-9c2fe423b079", "session_id": "VS-BA98FFF10454", "tool": "prepare_dispute", "duration_ms": 1, "outcome": "DISPUTE_NOT_ELIGIBLE"}
+{"timestamp": "2026-11-20T18:46:40.328343+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-9c2fe423b079"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:40.338268+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-d04083ecf456", "session_id": "VS-BA98FFF10454", "tool": "get_dispute_status", "duration_ms": 0, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:40.345304+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-d8cc921dab66", "session_id": "VS-BA98FFF10454", "tool": "list_cards", "duration_ms": 0, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:40.352629+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-9c0c4e7935c4", "session_id": "VS-BA98FFF10454", "tool": "prepare_card_block", "duration_ms": 1, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:41.460875+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-9c0c4e7935c4"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:41.474009+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-0234372ce072", "session_id": "VS-BA98FFF10454", "tool": "confirm_card_block", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:43.239132+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-cb2549e717cb"}
+{"timestamp": "2026-11-20T18:46:43.757131+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-cb2549e717cb"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:43.768022+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-867c319577e8", "session_id": "VS-BA98FFF10454", "tool": "request_human_handoff", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-95CBF7400758/verify HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:43.789133+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-eb6fdb9c3dd8", "session_id": "VS-C36D7FBDC485", "tool": "search_customer_transactions", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:43.799187+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-387cd7a856f3", "session_id": "VS-C36D7FBDC485", "tool": "prepare_dispute", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:44.682379+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-b5e818df2d76"}
+{"timestamp": "2026-11-20T18:46:44.683960+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-b5e818df2d76", "session_id": "VS-C36D7FBDC485", "tool": "get_transaction_status", "duration_ms": 0, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:45.234292+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-b5e818df2d76"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:45.242616+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-041eafcb6b3a", "session_id": "VS-C36D7FBDC485", "tool": "list_cards", "duration_ms": 1, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:45.243658+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-041eafcb6b3a", "session_id": "VS-C36D7FBDC485", "tool": "prepare_card_block", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:45.858991+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-50bb6a53c1b0"}
+{"timestamp": "2026-11-20T18:46:45.861167+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-50bb6a53c1b0", "session_id": "VS-C36D7FBDC485", "tool": "get_account_balance", "duration_ms": 1, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:46.375588+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-50bb6a53c1b0"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.386683+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-3c5c98a2628a", "session_id": "VS-C36D7FBDC485", "tool": "get_loan_summary", "duration_ms": 0, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-40A50A70B835/verify HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.408794+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-56e10fe74fde", "session_id": "VS-3C1BF7DAC7F6", "tool": "search_customer_transactions", "duration_ms": 1, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:46.409799+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-56e10fe74fde", "session_id": "VS-3C1BF7DAC7F6", "tool": "prepare_dispute", "duration_ms": 0, "outcome": "DISPUTE_NOT_ELIGIBLE"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.416800+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-2b3ffd00c322", "session_id": "VS-3C1BF7DAC7F6", "tool": "get_loan_summary", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.424323+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-7bc96d92dac5", "session_id": "VS-3C1BF7DAC7F6", "tool": "get_account_balance", "duration_ms": 0, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-97926D96C58F/verify HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.446896+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-629751a07d8a", "session_id": "VS-F5A5257B3388", "tool": "get_dispute_status", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.454328+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-430d5064683d", "session_id": "VS-F5A5257B3388", "tool": "list_cards", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.460912+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-c8633bff4151", "session_id": "VS-F5A5257B3388", "tool": "list_cards", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.468398+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-1ed694a15d45", "session_id": "VS-F5A5257B3388", "tool": "get_account_balance", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.475003+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-9d5912749bc3", "session_id": "VS-F5A5257B3388", "tool": "request_human_handoff", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.481177+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-2a84d472f6b9", "session_id": "VS-BA98FFF10454", "tool": "get_dispute_status", "duration_ms": 0, "outcome": "DISPUTE_NOT_FOUND"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/transactions/TXN-UPI-2001 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65288 - "POST /api/v1/cards/block/prepare HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/transactions HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:46.498202+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-fc49206c3110", "session_id": "VS-BA98FFF10454", "tool": "get_account_balance", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:47.104318+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-f973f5965d9b"}
+{"timestamp": "2026-11-20T18:46:47.105913+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-f973f5965d9b", "session_id": "VS-BA98FFF10454", "tool": "get_customer_context", "duration_ms": 0, "outcome": "ok"}
+{"timestamp": "2026-11-20T18:46:47.641835+00:00", "level": "INFO", "component": "httpx", "event": "HTTP Request: POST http://localhost:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "req-f973f5965d9b"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/accounts HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "GET /api/v1/cards HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "GET /api/v1/loans HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "GET /api/v1/transactions HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/NOPE/verify HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "GET /api/v1/accounts HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "GET /api/v1/accounts HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-320AD06B9017/verify HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-320AD06B9017/verify HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-320AD06B9017/verify HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-320AD06B9017/verify HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/auth/challenges/CH-E8463C18FFA6/verify HTTP/1.1" 200 OK
+{"timestamp": "2026-11-20T18:46:47.720207+00:00", "level": "INFO", "component": "tools", "event": "tool_executed", "request_id": "req-db88d663d9f7", "session_id": "VS-EF187C5F60C4", "tool": "get_account_balance", "duration_ms": 1, "outcome": "ok"}
+INFO:     127.0.0.1:65288 - "POST /api/v1/conversation/turn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /api/v1/ops/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/ops/overview HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65288 - "GET /api/v1/ops/overview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/ops/sessions/VS-EF187C5F60C4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /api/v1/ops/sessions/VS-BA98FFF10454 HTTP/1.1" 200 OK
